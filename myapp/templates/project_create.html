@@ -1,67 +1,49 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+{% extends 'layout.html' %} {% block content %}
+<div class="container">
+  <div class="">
+    <div class="card common_card" style="max-width: 500px">
+      <div class="card__title">
+        <h4>Add Project</h4>
+      </div>
+      <div class="card-body">
+        <form method="post">
+          {% csrf_token %}
 
-    <h1>Create</h1>
-    <form method="post">
-        {% csrf_token %}
-
-
-    
-
-
-        
-        <div>
-            <label for="id_Name">User:
-        
-            </label>
+          <div class="mb-3">
+            <label for="id_Name">User: </label>
             {{ form.all_users }}
-        </div>
-        <div>
-            <label for="id_Phone_number">Project name:
-                
-            </label>
+          </div>
+          <div class="mb-3">
+            <label for="id_Phone_number">Project name: </label>
             {{ form.project_name }}
-          
-        </div>
-        <div>
-            <label for="id_Address">Project cost:
-        
-            </label>
+          </div>
+          <div class="mb-3">
+            <label for="id_Address">Project cost: </label>
             {{ form.project_cost }}
-        </div>
-        <div>
-            <label for="id_Name">invoice number:
-        
-            </label>
+          </div>
+          <div class="mb-3">
+            <label for="id_Name">invoice number: </label>
             {{ form.invoice_number }}
-        </div>
+          </div>
 
-        <div>
-            <label for="id_Name">Invice date:
-        
-            </label>
+          <div class="mb-3">
+            <label for="id_Name">Invice date: </label>
             {{ form.invoice_date }}
-        </div>
+          </div>
 
-        <div>
-            <label for="id_Name">Project cost paid:
-        
-            </label>
+          <div class="mb-3">
+            <label for="id_Name">Project cost paid: </label>
             {{ form.project_cost_paid }}
-        </div>
+          </div>
 
-        <div>
-            <input type="submit" value="Save">
-        </div>
-    </form>
-</body>
-</html>
-    
-</body>
-</html>
+          <div class="mb-3 text-center">
+            <input class="btn btn-primary" type="submit" value="Save" />
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}

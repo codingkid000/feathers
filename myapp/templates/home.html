@@ -1,11 +1,50 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1> home page</h1>
-</body>
-</html>
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="container-fluid">
+  <div class="card_wrapper">
+    <div class="custom__card p-3">
+      <div class="row">
+        <div class="col-3">
+          <div class="card__icon">
+            <span class="material-symbols-outlined"> groups </span>
+          </div>
+        </div>
+        <div class="col-9">
+          <h5>8,637</h5>
+          <p>Total Users</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="custom__card p-3">
+      <div class="row">
+        <div class="col-3">
+          <div class="card__icon">
+            <span class="material-symbols-outlined"> group </span>
+          </div>
+        </div>
+        <div class="col-9">
+          <h5>837</h5>
+          <p>New Users</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="custom__card p-3">
+      <div class="row">
+        <div class="col-3">
+          <div class="card__icon">
+            <span class="material-symbols-outlined"> payments </span>
+          </div>
+        </div>
+        <div class="col-9">
+          <h5>88,637</h5>
+          <p>Total Amount</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
