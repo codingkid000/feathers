@@ -1,0 +1,197 @@
+
+
+
+:root {
+    --primary-color: #041d56;
+    /* --primary-color: #50bbe2; */
+    --light-color: #f2f2f2;
+    --dark-color: #252525;
+    /* --gradient-color: linear-gradient(to right, #2980b9, #6dd5fa, #ffffff); */
+    /* --gradient-color: #989ced; */
+    --gradient-color: #041d56;
+    --box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    --bs-pagination-active-bg:var(--primary-color);
+    
+  }
+  h1,h2,h3,h4,h5,h6,p,span{
+    margin: 0;
+  }
+  body{
+    background: var(--light-color);
+  }
+  .btn-primary{
+    background-color: var(--primary-color);
+    border: none;
+    outline: none;
+  }
+.swal2-confirm {
+    background-color: none;
+    background: var(--gradient-color) !important;
+    box-shadow: none;
+    border: none;
+    outline: none;
+  }
+  .layout {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    flex-wrap: wrap;
+    display: flex;
+  }
+  .sider {
+    width: 250px;
+  
+    padding-top: 15px;
+    height: 100%;
+    overflow: auto;
+    transition: all 0.5s;
+    background: var(--primary-color);
+  }
+
+  .content {
+    flex: 1;
+    width: 100%;
+    height: calc(100vh - 75px);
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: #f5f4f4;
+    padding: 20px;
+  }
+  .header {
+    min-height: 75px;
+    width: 100%;
+background: var(--gradient-color);
+    /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+  }
+  .toggler {
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    width: 75px;
+   aspect-ratio: 1/1;
+  }
+
+  .material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+  }
+  .icon__size {
+    font-size: 2rem;
+    color: var(--light-color);
+  }
+  .nav_list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .nav_list li a.nav_link {
+    margin: 5px 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    gap: 10px;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 1rem;
+    text-transform: capitalize;
+    color: var(--light-color);
+    /* background: #f8f8f8; */
+    font-weight: 500;
+    /* transition: all 0.5s; */
+  }
+  .nav_list li a.nav_link.active {
+    background: var(--light-color);
+    color: var(--primary-color);
+  }
+  .nav_list li a.nav_link:hover,
+  .nav_list li a.nav_link:focus,
+  .nav_list li a.nav_link:active {
+    background: var(--light-color);
+    color: var(--primary-color);
+  }
+  .logo_section {
+    min-height: 75px;
+    width: 250px;
+    background: var(--primary-color);
+    /* color: var(--light-color); */
+    font-size: 1.5rem;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    transition: all 0.5s;
+  }
+  .logo_section img {
+    height: 50px;
+    width: 250px;
+    transition: all 0.5s;
+    /* padding: 10px 0; */
+    object-fit: contain;
+    object-position: center;
+  }
+  
+  .logout_icon img ,
+  .logout_icon svg 
+  {
+    width: 16px;
+    height: 16px;
+  }
+  .logout_icon{
+    color: var(--light-color);
+  }
+  .card_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+   
+  }
+  .card{
+    /* background: var(--light-color); */
+    width: 100%;
+    border: none;
+    box-shadow: var(--box-shadow);
+  }
+  .common_card{
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+  .card__title{
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    text-align: center;
+    padding: 10px;
+  }
+  .custom__card {
+    background: var(--light-color);
+    margin: 10px;
+    flex: 1;
+    min-width: 250px;
+    max-width: 350px;
+    width: 100%;
+    box-shadow: var(--box-shadow);
+  }
+  .custom__card p,
+  .custom__card h5 {
+    margin: 0;
+  }
+  .card__icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--gradient-color);
+    color: var(--light-color);
+    display: grid;
+    place-items: center;
+  }
+  /* width */
+  /*  */
+
+
+  table > tbody > tr > td{
+    vertical-align: middle;
+  }
