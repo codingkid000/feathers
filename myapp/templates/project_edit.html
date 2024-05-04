@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+    <form method="post">
+        {% csrf_token %}
+    
+
+
+        <div>
+            <label for="id_Phone_number">Project name:
+                
+            </label>
+            {{ form.project_name }}
+          
+        </div>
+        <div>
+            <label for="id_Address">Project cost:
+        
+            </label>
+            {{ form.project_cost }}
+        </div>
+        <div>
+            <label for="id_Name">invoice number:
+        
+            </label>
+            {{ form.invoice_number }}
+        </div>
+
+        <div>
+            <label for="id_Name">Invice date:
+        
+            </label>
+            {{ form.invoice_date }}
+        </div>
+
+        <div>
+            <label for="id_Name">Project cost paid:
+        
+            </label>
+            {{ form.project_cost_paid }}
+        </div>
+
+        <div>
+            <input type="submit" value="Edit">
+        </div>
+        
+ 
+    </form>
+    
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>project all details</h1>
+
+    {% for i in pro %}
+
+    {{i.project_name}}
+
+    {% endfor %}
+    <br>
+    <br>
+
+    <a href="{% url 'Labour_create' %}">creat</a>
+
+    {% for i in labour %}
+
+    {{i.labour_category_add}}
+    {{i.labour_works}}
+    {{i.salary}}
+    {{i.mydate}}
+    {{i.qut}}
+    
+
+    {% endfor %}
+</body>
+</html>
+

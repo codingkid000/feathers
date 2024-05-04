@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> admin home page </h1>
+
+    <h2>all users list</h2> 
+
+    {% for i in usr %}
+
+        {{i.username}}   {{i.role}}
+        
+        <br>
+    
+    {% endfor %}
+
+    
+    <h2>Project details</h2>
+    <table>
+        <thead>
+            <tr>
+                
+                <th>project_name</th>
+                <th>project_cost</th>
+                <th>invoice_number</th>
+                <th>invoice_date</th>
+                <th>project_cost_paid</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for c in details %}
+            <tr>
+                <a href="{% url 'project_name' id=c.id %}">{{ c.project_name }}</a>
+                <td>{{ c.project_name }}</td>
+                <td>{{ c.project_cost }}</td>
+                <td>{{ c.invoice_number }}</td> 
+                <td>{{ c.invoice_date|date:"d/m/Y" }}</td>
+                <td>{{ c.project_cost_paid }}</td>
+                <td>
+                    <a href="{% url 'project_edit' id=c.id %}">Edit</a>
+                    <a href="{% url 'project_delete' id=c.id %}">Delete</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{% url 'project_create' %}">creat</a>
+
+
+
+
+    
+<h2>Labour details</h2>
+<table>
+    <thead>
+        <tr>
+            
+            <th>date</th>
+            <th>labour catagory</th>
+            <th>quantity</th>
+            <th>labour works</th>
+            <th>salary</th>
+          
+        </tr>
+    </thead>
+    <tbody>
+        {% for i in labour %}
+        <tr>
+            <td>{{ i.mydate|date:"d/m/Y" }}</td>         
+            <td>{{ i.labour_category_add }}</td>
+            <td>{{ i.qut }}</td> 
+            <td>{{ i.labour_works }}</td> 
+            <td>{{ i.salary }}</td>
+            <td>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+    
+<h2>material details</h2>
+<table>
+    <thead>
+        <tr>
+            
+    
+            <th>material_category_add</th>
+            <th>material_works</th>
+            <th>material_quandity</th>
+            <th>material_cost</th>
+          
+        </tr>
+    </thead>
+    <tbody>
+        {% for i in mt %}
+        <tr>
+            <td>{{ i.material_category_add }}</td>         
+            <td>{{ i.material_works }}</td>
+            <td>{{ i.material_quandity }}</td> 
+            <td>{{ i.material_cost }}</td> 
+        </tr>
+        {% endfor %}    
+    </tbody>
+</table>
+
+
+
+
+
+    
+<h2>AdditionalDetails</h2>
+<table>
+    <thead>
+        <tr>
+        
+    
+            <th>additional_category</th>
+            <th>aditional_quandity</th>
+            <th>additional_cost</th>
+            <th>additional_works</th>
+          
+        </tr>
+    </thead>
+    <tbody>
+        {% for i in add %}
+        <tr>
+            <td>{{ i.additional_category_add }}</td>         
+            <td>{{ i.aditional_quandity }}</td>
+            <td>{{ i.additional_cost }}</td> 
+            <td>{{ i.additional_works }}</td> 
+            
+            <td>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+
+
+<body>
+    
+</body>
+</html>

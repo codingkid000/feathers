@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>create</h1>
+    <form method="post">
+        {% csrf_token %}        
+        <div>
+            <label for="id_Name">labour_category_add:
+        
+            </label>
+            {{ form.labour_category_add }}
+        </div>
+        <div>
+            <label for="id_Phone_number">Project name:
+                
+            </label>
+            {{ form.labour_works }}
+          
+        </div>
+        <div>
+            <label for="id_Address">Project cost:
+        
+            </label>
+            {{ form.salary }}
+        </div>
+        <div>
+            <label for="id_Name">invoice date:
+        
+            </label>
+            {{ form.mydate }}
+        </div>
+
+        <div>
+            <label for="id_Name">quantity:
+        
+            </label>
+            {{ form.qut }}
+        </div>
+        <div>
+            <input type="submit" value="Save">
+        </div>
+    </form>
+</body>
+</html>
+    
+</body>
+</html>
