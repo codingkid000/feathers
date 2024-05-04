@@ -196,7 +196,13 @@ def project_name(request,id):
     mt=MaterialsDetails.objects.filter(user_id=id)
     return render(request,"project_name.html",locals())
      
-     
+def all_projects(request):
+    
+    return render(request,'all_projects.html')
+
+def all_users(request):
+    
+    return render(request,'users.html')
 
 
 

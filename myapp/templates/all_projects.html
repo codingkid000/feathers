@@ -1,24 +1,25 @@
-{% extends "layout.html" %}
-{% block content %}
+{% extends 'layout.html' %}
 
+
+{% block content %}
 <div class="container py-3">
     <div class="card p-3">
       <div>
-        <a href="{% url 'register' %}"><button class="btn btn-primary">Add User</button></a>
+        <a href="{% url 'project_create' %}"><button class="btn btn-primary">Add Project</button></a>
       </div>
     </div>
     <div class="card mt-3 common_card">
       <div class="card__title">
-        <h4>All Users</h4>
+        <h4>All Projects</h4>
       </div>
       <div class="card-body pb-5">
         <div class="table-responsive">
           <table id="example" class="table table-striped" style="width: 100%">
             <thead>
               <tr>
-                <th>Name</th>
-                <th>Role</th>
-                <th>Password</th>
+                <th>Project Name</th>
+                <th>Project Cost</th>
+                <th>Start Date</th>
                 <th>Status</th>
                 <th>Action</th>
               </tr>
@@ -121,6 +122,4 @@
       </div>
     </div>
   </div>
-
-
-{% endblock %}
+  {% endblock %}

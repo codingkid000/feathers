@@ -20,12 +20,15 @@ from myapp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    
+    path('all_users/', views.all_users, name='all_users'),
     path('register/', views.register, name='register'),
     path('login/', views.user_login, name='login'),
     path('logout/', views.user_logout, name='logout'),
     path('home/', views.home, name='home'),
     path('', views.admin_home, name='admin_home'),
     path('member/', views.member, name='member'),  
+    path('all_projects/',views.all_projects,name='all_projects'),
     path('project_create/',views.project_create,name='project_create'),
     path("project_edit/<int:id>",views.project_edit,name="project_edit"),
     path("project_delete/<int:id>",views.project_delete,name="project_delete"),
