@@ -204,10 +204,17 @@ def all_users(request):
     
     return render(request,'users.html')
 
+def daily_update_page(request):
+    
+    return render(request,'daily_update_page.html')
 
+def view_project_page(request):
+    
+    return render(request,'view_project_page.html')
 
-
-
+def add_category_page(request):
+    
+    return render(request,'add_category_page.html')
 
 
 

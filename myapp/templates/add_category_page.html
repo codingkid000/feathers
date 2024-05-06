@@ -1,0 +1,24 @@
+{% extends 'layout.html'%} {% block content %}
+<div class="container">
+  <div class="d-flex justify-content-center align-items-center">
+    <div class="card common_card" style="max-width: 500px">
+      <div class="card__title">
+        <h4>Add Category</h4>
+      </div>
+   <div class="card-body">
+    <form >
+        {% csrf_token %}
+        
+        <div class="form-group my-3">
+          <!-- <label for="add_category" class="sr-only">Add Category</label> -->
+          <input type="text" class="form-control" id="add_category" placeholder="Add Category">
+        </div>
+       <div class="mb-2 text-center">
+        <button type="submit" class="btn btn-primary mb-2">Add Category</button>
+       </div>
+      </form>
+   </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -144,6 +144,9 @@ background: var(--gradient-color);
   .logout_icon{
     color: var(--light-color);
   }
+.logout_icon:is(:hover,:focus,:active){
+  color: var(--light-color);
+}
   .card_wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -193,5 +196,10 @@ background: var(--gradient-color);
 
 
   table > tbody > tr > td{
+    vertical-align: middle;
+  }
+  .custom_table tr th{
+    background: var(--primary-color);
+    color: var(--light-color);
     vertical-align: middle;
   }
