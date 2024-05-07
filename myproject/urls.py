@@ -23,10 +23,10 @@ urlpatterns = [
     
     path('all_users/', views.all_users, name='all_users'),
     path('register/', views.register, name='register'),
-    path('login/', views.user_login, name='login'),
+    path('login_view/', views.login_view, name='login_view'),
     path('logout/', views.user_logout, name='logout'),
-    path('home/', views.home, name='home'),
-    path('', views.admin_home, name='admin_home'),
+    path('/', views.home, name='home'),
+    path('admin_home', views.admin_home, name='admin_home'),
     path('member/', views.member, name='member'),  
     path('all_projects/',views.all_projects,name='all_projects'),
     path('project_create/',views.project_create,name='project_create'),
@@ -34,10 +34,10 @@ urlpatterns = [
     path("project_delete/<int:id>",views.project_delete,name="project_delete"),
     path("project_name/<int:id>",views.project_name,name="project_name"),
     path("daily_update_page/",views.daily_update_page,name="daily_update_page"),
-    path("view_project_page/",views.view_project_page,name="view_project_page"),
+    path("view_project_page/<int:id>",views.view_project_page,name="view_project_page"),
     path("add_category_page/",views.add_category_page,name="add_category_page"),
-    
-    path("Labour_create/",views.Labour_create,name="Labour_create")
+    path("Labour_create/",views.Labour_create,name="Labour_create"),
+    path("active/<int:id>",views.active,name="active")
     
     
     

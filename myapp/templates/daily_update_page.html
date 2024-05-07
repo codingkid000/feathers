@@ -7,6 +7,9 @@
       </div>
       <div class="card-body">
         <form method="post">
+
+          {% csrf_token %}
+          
             <div class="form-group mb-3">
                 <label for="daily_date">Date</label>
               <input type="date" class="form-control" name="date" id="daily_date">

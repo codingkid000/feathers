@@ -28,74 +28,15 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>Tiger Nixon</td>
-              <td>System Architect</td>
-              <td>Edinburgh</td>
-              <td><p class="text-success">active</p></td>
-              <td>
-                <a class="text-success" href="{% url 'view_project_page' %}"
-                ><svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="lucide lucide-eye"
-                >
-                <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg
-              ></a>&nbsp;
-                <a class="px-2" href=""
-                  ><svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-pencil"
-                  >
-                    <path
-                      d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"
-                    />
-                    <path d="m15 5 4 4" /></svg
-                ></a>&nbsp;
-                <a class="text-danger" href=""
-                  ><svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-trash-2"
-                  >
-                    <path d="M3 6h18" />
-                    <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6" />
-                    <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2" />
-                    <line x1="10" x2="10" y1="11" y2="17" />
-                    <line x1="14" x2="14" y1="11" y2="17" /></svg
-                ></a>
-              </td>
-            </tr>
-            <tr>
-              <td>Garrett Winters</td>
-              <td>Accountant</td>
-              <td>Tokyo</td>
-              <td><p class="text-danger">inactive</p></td>
 
+            {% for i in v %}
+            <tr>
+              <td>{{i.project_name}}</td>
+              <td>{{i.project_cost}}</td>
+              <td>{{i.invoice_date|date:"d m y"}}</td>
+              <td><p class="{% if i.at == 'Active' %} text-success {% else %} text-danger {% endif %}">{{i.at}}</p></td>
               <td>
-                <a class="text-success" href="{% url 'view_project_page' %}"
+                <a class="text-success" href="{% url 'view_project_page' i.id %}"
                 ><svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
@@ -148,7 +89,10 @@
                     <line x1="14" x2="14" y1="11" y2="17" /></svg
                 ></a>
               </td>
-            </tr>
+
+              {% endfor %}
+                      </tr>
+        
           </tbody>
         </table>
       </div>

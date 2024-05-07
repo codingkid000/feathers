@@ -28,18 +28,22 @@
         </tr>
       </thead>
       <tbody>
+        
         <tr>
           <td rowspan="3">12/04/2001</td>
-          <td>painter</td>
-          <td>2</td>
-          <td>1000</td>
-          <td>Painting work</td>
+          {% for i in labour %}
+          <td>{{i.labour_category_add}}</td>
+          <td>{{i.qut}}</td>
+          <td>{{i.salary}}</td>
+          <td>{{i.labour_works}}</td>
+          {% endfor %}
           <td rowspan="3">Stone</td>
           <td rowspan="3">500</td>
           <td rowspan="3">Tea</td>
           <td rowspan="3">100</td>
           <td rowspan="3">1000</td>
         </tr>
+
         <tr>
           <!-- <td>12/04/2001</td> -->
           <td>carpenter</td>

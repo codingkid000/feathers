@@ -9,17 +9,20 @@
             </div>
             <div class="card-body">
             <form action="" method="post">
+
+              {% csrf_token %}
+              
                 <div class="form-group mb-3">
                     <label for="name">Name</label>
-                    <input type="text" name="" class="form-control" id="name" placeholder="Name">
+                    <input type="text" name="username" class="form-control" id="name" placeholder="Name">
                   </div>
                   <div class="form-group mb-3">
                     <label for="email">Email</label>
-                    <input type="email" class="form-control" id="email" placeholder="Email">
+                    <input type="email" name="email" class="form-control" id="email" placeholder="Email">
                   </div>
                   <div class="form-group mb-3">
                     <label for="role">Role</label>
-                    <select class="form-select" id="role">
+                    <select name="role" class="form-select" id="role">
                         <option  value="admin" selected>Admin</option>
                         <option value="user">User</option>
                         <option value="member">Member</option>
@@ -28,11 +31,11 @@
                   </div>
                   <div class="form-group mb-3">
                     <label for="password">Create Password</label>
-                    <input type="password" class="form-control" id="password" placeholder="Password">
+                    <input type="password" name="password1" class="form-control" id="password" placeholder="Password">
                   </div>
                   <div class="form-group mb-3">
                     <label for="c_password">Confirm Password</label>
-                    <input type="c_password" class="form-control" id="c_password" placeholder="confirm Password">
+                    <input type="c_password" name="password2" class="form-control" id="c_password" placeholder="confirm Password">
                   </div>
                   <div class="form-group mb-3 text-center">
                     <button class="btn btn-primary" type="submit">Submit</button>

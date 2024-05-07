@@ -9,11 +9,22 @@ class CustomUser(AbstractUser):
         ("member","Member"),
     ]
     role = models.CharField(max_length=10, choices=ROLE_CHOICES,default="user")
+    mypassword=models.CharField(max_length=100,null=True,blank=True)
+    active_choice=[
+        ('active','Active'),
+        ("inactive","Inactive"),
+    ]
+  
+    active=models.CharField(max_length=100,null=True,blank=True,default="active")
+    
+    
     class Meta:
         unique_together = ('username', 'email')
         swappable = 'AUTH_USER_MODEL'
 CustomUser._meta.get_field('groups').remote_field.related_name = 'customuser_set'
 CustomUser._meta.get_field('user_permissions').remote_field.related_name = 'customuser_set'
+
+
 
 class ProjectsDetails(models.Model):
     all_users=models.CharField(max_length=100,null=True,blank=True)
@@ -22,7 +33,8 @@ class ProjectsDetails(models.Model):
     invoice_number=models.CharField(max_length=100,null=True,blank=True)
     invoice_date=models.DateField(auto_now_add=True,null=True,blank=True)
     project_cost_paid=models.IntegerField(null=True)
-    
+    active_field = models.BooleanField(default=False,null=True)
+    at=models.CharField(max_length=100,null=True,blank=True)
     
 class LabourDetails(models.Model):
     user=models.ForeignKey(ProjectsDetails,on_delete=models.CASCADE,null=True,blank=True)
