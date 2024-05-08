@@ -112,8 +112,8 @@ background: var(--gradient-color);
   .nav_list li a.nav_link:hover,
   .nav_list li a.nav_link:focus,
   .nav_list li a.nav_link:active {
-    background: var(--light-color);
-    color: var(--primary-color);
+    background: #ffffff73;
+    color: var(--light-color);
   }
   .logo_section {
     min-height: 75px;
